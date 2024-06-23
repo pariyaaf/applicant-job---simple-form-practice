@@ -1,4 +1,4 @@
-<h2>Create Job</h2>
+<h2>Create Applicant</h2>
 <form method="post" action="{% url 'create_applicant' %}"  enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}

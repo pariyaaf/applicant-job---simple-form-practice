@@ -1,0 +1,7 @@
+<h2>Create Job</h2>
+<form method="post" action="{% url 'create_applicant' %}"  enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Create applicant</button>
+</form>
+<p><a href="{% url 'get_jobs' %}">Back to jobs List</a></p>

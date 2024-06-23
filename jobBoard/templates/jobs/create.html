@@ -1,0 +1,7 @@
+<h2>Create Job</h2>
+<form method="post" action="{% url 'create_job' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Create Job</button>
+</form>
+<p><a href="{% url 'get_jobs' %}">Back to Jobs List</a></p>

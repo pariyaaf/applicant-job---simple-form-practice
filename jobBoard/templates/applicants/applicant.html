@@ -1,0 +1,21 @@
+<!-- applicants/applicant.html -->
+
+<h2>Applicants List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Job</th>
+            <th>Resume</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for applicant in applicants %}
+            <tr>
+                <td>{{ applicant.user.username }}</td>
+                <td>{{ applicant.application_jobs.title }}</td>
+                <td><a href="{{ applicant.resume.url }}">Download Resume</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
